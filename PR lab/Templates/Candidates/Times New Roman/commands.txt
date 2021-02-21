@@ -1,0 +1,409 @@
+>> f = imread('Template.jpg');
+Error using imread (line 349)
+File "Template.jpg" does not exist.
+ 
+>> f = imread('C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\Template.jpg');
+>> size(f);
+>> [M, N] = size(f);
+>> whos f;
+  Name        Size                   Bytes  Class    Attributes
+
+  f         900x9000x3            24300000  uint8              
+
+>> imshow(f, G);
+Undefined function or variable 'G'.
+ 
+>> imshow(f, 256);
+Error using imshow>preParseInputs (line 456)
+The syntax IMSHOW(I,N) has been removed.
+
+Error in imshow (line 214)
+  varargin_translated = preParseInputs(varargin{:});
+ 
+>> imshow(f, '256');
+Error using imageDisplayParsePVPairs (line 68)
+Invalid input arguments.
+
+Error in imageDisplayParseInputs (line 69)
+[common_args,specific_args] = imageDisplayParsePVPairs(varargin{:});
+
+Error in imshow (line 219)
+  [common_args,specific_args] = ...
+ 
+>> imshow(f, [low High]);
+Undefined function or variable 'low'.
+ 
+>> low = 200*200;
+>> high = 500*500;
+>> imshow(f, [low]);
+Error using imshow>preParseInputs (line 456)
+The syntax IMSHOW(I,N) has been removed.
+
+Error in imshow (line 214)
+  varargin_translated = preParseInputs(varargin{:});
+ 
+>> imshow(f, [low high]);
+Warning: Image is too big to fit on screen; displaying at 13% 
+> In imuitools\private\initSize at 71
+  In imshow at 282 
+>> imshow(f, [ ]);
+Warning: Image is too big to fit on screen; displaying at 13% 
+> In imuitools\private\initSize at 71
+  In imshow at 282 
+>> imshow(f);
+Warning: Image is too big to fit on screen; displaying at 13% 
+> In imuitools\private\initSize at 71
+  In imshow at 282 
+>> f = imread('C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\1.jpg');
+>> size(f);
+>> [M, N] = size(f);
+>> whos f;
+  Name        Size                 Bytes  Class    Attributes
+
+  f         900x900x3            2430000  uint8              
+
+>> imshow(f, G);
+Undefined function or variable 'G'.
+ 
+>> low = 200*200;
+>> high = 500*500;
+>> imshow(f, [low]);
+Error using imshow>preParseInputs (line 456)
+The syntax IMSHOW(I,N) has been removed.
+
+Error in imshow (line 214)
+  varargin_translated = preParseInputs(varargin{:});
+ 
+>> imshow(f, [low high]);
+Warning: Image is too big to fit on screen; displaying at 50% 
+> In imuitools\private\initSize at 71
+  In imshow at 282 
+>> imshow(f, [ ]);
+Warning: Image is too big to fit on screen; displaying at 50% 
+> In imuitools\private\initSize at 71
+  In imshow at 282 
+>> imshow(f);
+Warning: Image is too big to fit on screen; displaying at 50% 
+> In imuitools\private\initSize at 71
+  In imshow at 282 
+>> figure, imshow(f);
+Warning: Image is too big to fit on screen; displaying at 50% 
+> In imuitools\private\initSize at 71
+  In imshow at 282 
+>> g = imread('C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\2.jpg');
+>> figure, imshow(g);
+Warning: Image is too big to fit on screen; displaying at 50% 
+> In imuitools\private\initSize at 71
+  In imshow at 282 
+>> imshow(f), figure, imshow(g);
+Warning: Image is too big to fit on screen; displaying at 50% 
+> In imuitools\private\initSize at 71
+  In imshow at 282 
+Warning: Image is too big to fit on screen; displaying at 50% 
+> In imuitools\private\initSize at 71
+  In imshow at 282 
+>> h = imread('C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\3.jpg');
+>> imshow(h, { ]);
+ imshow(h, { ]);
+             |
+Error: Unbalanced or unexpected parenthesis or bracket.
+ 
+>> imshow(h, { });
+Warning: Image is too big to fit on screen; displaying at 50% 
+> In imuitools\private\initSize at 71
+  In imshow at 282 
+>> imshow(h, [ ]);
+Warning: Image is too big to fit on screen; displaying at 50% 
+> In imuitools\private\initSize at 71
+  In imshow at 282 
+>> imwrite(f,'trial.jpg');
+>> imwrite(f,'C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\trial.jpg');
+>> imwrite(f,'C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\trial1.jpg', '900', '25');
+Error using writejpg>set_jpeg_props (line 172)
+Expected input to match one of these strings:
+
+'quality', 'comment', 'bitdepth', 'mode'
+
+The input, '900', did not match any of the valid strings.
+
+Error in writejpg (line 49)
+props = set_jpeg_props(data,varargin{:});
+
+Error in imwrite (line 472)
+        feval(fmt_s.write, data, map, filename, paramPairs{:});
+ 
+>> imwrite(f,'C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\trial1.jpg', '30*30', '25');
+Error using writejpg>set_jpeg_props (line 172)
+Expected input to match one of these strings:
+
+'quality', 'comment', 'bitdepth', 'mode'
+
+The input, '30*30', did not match any of the valid strings.
+
+Error in writejpg (line 49)
+props = set_jpeg_props(data,varargin{:});
+
+Error in imwrite (line 472)
+        feval(fmt_s.write, data, map, filename, paramPairs{:});
+ 
+>> quality = 900;
+>> imwrite(f,'C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\trial1.jpg', 'quality', 25);
+>> imwrite(f,'C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\trial1.jpg', '400', 25);
+Error using writejpg>set_jpeg_props (line 172)
+Expected input to match one of these strings:
+
+'quality', 'comment', 'bitdepth', 'mode'
+
+The input, '400', did not match any of the valid strings.
+
+Error in writejpg (line 49)
+props = set_jpeg_props(data,varargin{:});
+
+Error in imwrite (line 472)
+        feval(fmt_s.write, data, map, filename, paramPairs{:});
+ 
+>> quality = 400;
+>> imwrite(f,'C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\trial1.jpg', 'quality', 25);
+>> imwrite(f,'C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\trial2.jpg', 'quality', 25);
+>> quality = 30;
+>> imwrite(f,'C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\trial3.jpg', 'quality', 25);
+>> iminfo f;
+Undefined function 'iminfo' for input arguments of type 'char'.
+ 
+Did you mean:
+>> imfinfo f;
+Error using imfinfo (line 99)
+Unable to open file "f" for reading.
+ 
+>> imfinfo 'f';
+Error using imfinfo (line 99)
+Unable to open file "f" for reading.
+ 
+>> imfinfo 'C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\4.jpg';
+>> imfinfo 'C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\5.jpg';
+>> o = imfinfo 'C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\5.jpg';
+ o = imfinfo 'C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\5.jpg';
+             |
+Error: Unexpected MATLAB expression.
+ 
+>> imfinfo 'C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\5.jpg';
+>> imfinfo '5.jpg';
+Error using imfinfo (line 99)
+Unable to open file "5.jpg" for reading.
+ 
+>> imfinfo 'C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\5.jpg';
+>> imfinfo C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\5.jpg;
+Error using imfinfo
+Too many input arguments.
+ 
+>> imfinfo 5.jpg;
+Error using imfinfo (line 99)
+Unable to open file "5.jpg" for reading.
+ 
+>> imfinfo 'C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\5.jpg';
+>> k = imfinfo('C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\5.jpg');
+>> image_bytes = k.Width*k.Height*K.BitDepth/8;
+Undefined variable "K" or function "K.BitDepth".
+ 
+>> image_bytes = k.Width*k.Height*k.BitDepth/8;
+>> compressed_bytes = k.FileSize;
+>> compression_ratio = image_bytes/compressed_bytes;
+>> imwrite(g, 'file1.tif', 'compression', 'parameter', 'resolution', [colres rowres]);
+Undefined function or variable 'colres'.
+ 
+>> imwrite(g, 'file1.tif', 'compression', 'parameter', 'resolution', [ ]);
+Error using writetif>parse_param_value_pairs (line 169)
+The value of 'resolution' is invalid. Expected RESOLUTION to be nonempty.
+
+Error in writetif (line 44)
+[compression, description, resolution, rowsperstrip, writemode, colorspace] ...
+
+Error in imwrite (line 472)
+        feval(fmt_s.write, data, map, filename, paramPairs{:});
+ 
+>> imwrite(g, 'file1.tif', '71369', '200', '72', [ ]);
+Error using writetif>parse_param_value_pairs (line 169)
+'71369' is not a recognized parameter. For a list of valid name-value pair arguments, see the
+documentation for this function.
+
+Error in writetif (line 44)
+[compression, description, resolution, rowsperstrip, writemode, colorspace] ...
+
+Error in imwrite (line 472)
+        feval(fmt_s.write, data, map, filename, paramPairs{:});
+ 
+>> compression = 71369;
+>> parameter = 200;
+>> resolution = 72;
+>> imwrite(g, 'file1.tif', 'compression', 'parameter', 'resolution', [ ]);
+Error using writetif>parse_param_value_pairs (line 169)
+The value of 'resolution' is invalid. Expected RESOLUTION to be nonempty.
+
+Error in writetif (line 44)
+[compression, description, resolution, rowsperstrip, writemode, colorspace] ...
+
+Error in imwrite (line 472)
+        feval(fmt_s.write, data, map, filename, paramPairs{:});
+ 
+>> colres = 100;
+>> rowres = 100;
+>> imwrite(g, 'file1.tif', 'compression', 'parameter', 'resolution', [colres rowres]);
+Error using writetif>parse_param_value_pairs (line 171)
+Expected input to match one of these strings:
+
+'packbits', 'ccitt', 'deflate', 'fax3', 'fax4', 'jpeg', 'lzw', 'none'
+
+The input, 'parameter', did not match any of the valid strings.
+
+Error in writetif (line 44)
+[compression, description, resolution, rowsperstrip, writemode, colorspace] ...
+
+Error in imwrite (line 472)
+        feval(fmt_s.write, data, map, filename, paramPairs{:});
+ 
+>> imwrite(g, 'file1.tif', 'compression', 'parameter', 'resolution', [300 300]);
+Error using writetif>parse_param_value_pairs (line 171)
+Expected input to match one of these strings:
+
+'packbits', 'ccitt', 'deflate', 'fax3', 'fax4', 'jpeg', 'lzw', 'none'
+
+The input, 'parameter', did not match any of the valid strings.
+
+Error in writetif (line 44)
+[compression, description, resolution, rowsperstrip, writemode, colorspace] ...
+
+Error in imwrite (line 472)
+        feval(fmt_s.write, data, map, filename, paramPairs{:});
+ 
+>> imwrite(f, 'file1.tif', 'compression', 'parameter', 'resolution', [300 300]);
+Error using writetif>parse_param_value_pairs (line 171)
+Expected input to match one of these strings:
+
+'packbits', 'ccitt', 'deflate', 'fax3', 'fax4', 'jpeg', 'lzw', 'none'
+
+The input, 'parameter', did not match any of the valid strings.
+
+Error in writetif (line 44)
+[compression, description, resolution, rowsperstrip, writemode, colorspace] ...
+
+Error in imwrite (line 472)
+        feval(fmt_s.write, data, map, filename, paramPairs{:});
+ 
+>> imwrite(f, 'C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\file1.tif', 'compression', 'parameter', 'resolution', [300 300]);
+Error using writetif>parse_param_value_pairs (line 171)
+Expected input to match one of these strings:
+
+'packbits', 'ccitt', 'deflate', 'fax3', 'fax4', 'jpeg', 'lzw', 'none'
+
+The input, 'parameter', did not match any of the valid strings.
+
+Error in writetif (line 44)
+[compression, description, resolution, rowsperstrip, writemode, colorspace] ...
+
+Error in imwrite (line 472)
+        feval(fmt_s.write, data, map, filename, paramPairs{:});
+ 
+>> res = round(200*2.25/1.5);
+>> imwrite(f, 'C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\file1.tif', 'compression', 'none', 'resolution', res);
+>> imwrite(f, 'C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\file1.tif', 'compression', 'parameter', 'resolution', res);
+Error using writetif>parse_param_value_pairs (line 171)
+Expected input to match one of these strings:
+
+'packbits', 'ccitt', 'deflate', 'fax3', 'fax4', 'jpeg', 'lzw', 'none'
+
+The input, 'parameter', did not match any of the valid strings.
+
+Error in writetif (line 44)
+[compression, description, resolution, rowsperstrip, writemode, colorspace] ...
+
+Error in imwrite (line 472)
+        feval(fmt_s.write, data, map, filename, paramPairs{:});
+ 
+>> imwrite(g, 'C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\file2.tif', 'compression', 'none', 'resolution', res);
+>> print -fno -dfileformat -rresno 'C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\file2.tif';
+Error using checkArgsForHandleToPrint>LocalString2Handle (line 170)
+Problem reading Figure handle in -f switch: '-fno'.
+
+Error in checkArgsForHandleToPrint (line 43)
+
+
+
+Error in print>LocalCreatePrintJob (line 346)
+    handles = checkArgsForHandleToPrint(0, varargin{:});
+
+Error in print (line 163)
+    [pj, inputargs] = LocalCreatePrintJob(varargin{:});
+ 
+>> print -fno -dfileformat -rresno C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\7.jpg;
+Error using checkArgsForHandleToPrint>LocalString2Handle (line 170)
+Problem reading Figure handle in -f switch: '-fno'.
+
+Error in checkArgsForHandleToPrint (line 43)
+
+
+
+Error in print>LocalCreatePrintJob (line 346)
+    handles = checkArgsForHandleToPrint(0, varargin{:});
+
+Error in print (line 163)
+    [pj, inputargs] = LocalCreatePrintJob(varargin{:});
+ 
+>> print -f1 -dtiff -r300
+Error using checkArgsForHandleToPrint>LocalString2Handle (line 172)
+What follows -f is not a Figure handle.
+
+Error in checkArgsForHandleToPrint (line 43)
+
+
+
+Error in print>LocalCreatePrintJob (line 346)
+    handles = checkArgsForHandleToPrint(0, varargin{:});
+
+Error in print (line 163)
+    [pj, inputargs] = LocalCreatePrintJob(varargin{:});
+ 
+>> hi_res_rose = 300;
+>> print -f1 -dtiff -r300 hi_res_rose;
+Error using checkArgsForHandleToPrint>LocalString2Handle (line 172)
+What follows -f is not a Figure handle.
+
+Error in checkArgsForHandleToPrint (line 43)
+
+
+
+Error in print>LocalCreatePrintJob (line 346)
+    handles = checkArgsForHandleToPrint(0, varargin{:});
+
+Error in print (line 163)
+    [pj, inputargs] = LocalCreatePrintJob(varargin{:});
+ 
+>> print -f1 -dtiff -r300 f;
+Error using checkArgsForHandleToPrint>LocalString2Handle (line 172)
+What follows -f is not a Figure handle.
+
+Error in checkArgsForHandleToPrint (line 43)
+
+
+
+Error in print>LocalCreatePrintJob (line 346)
+    handles = checkArgsForHandleToPrint(0, varargin{:});
+
+Error in print (line 163)
+    [pj, inputargs] = LocalCreatePrintJob(varargin{:});
+ 
+>> t = imread('C:\Users\Joyanta\Dropbox\My PC (Joyanta-PC)\Desktop\Templates\Candidates\Times New Roman\file2.tif');
+>> print -f1 -dtiff -r300 t;
+Error using checkArgsForHandleToPrint>LocalString2Handle (line 172)
+What follows -f is not a Figure handle.
+
+Error in checkArgsForHandleToPrint (line 43)
+
+
+
+Error in print>LocalCreatePrintJob (line 346)
+    handles = checkArgsForHandleToPrint(0, varargin{:});
+
+Error in print (line 163)
+    [pj, inputargs] = LocalCreatePrintJob(varargin{:});
+ 
+>> 
